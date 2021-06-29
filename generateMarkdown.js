@@ -12,9 +12,47 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  # ${data.title}
+
+  #Table of Contents
+
+  -[Intallation](#installation)
+  -[Usage](#usage)
+  -[Credits](#credits)
+  -[License](#license)
+
+  ## Installation:
+  ${response.installation}
+
+  ## Usage:
+  ${response.usage}
+
+  ## Credits:
+  ${response.credits}
+
+  ## License:
+  ${response.license}
+
+
+
 
 `;
 }
 
-module.exports = generateMarkdown;
+//Initialize the program
+
+async function init() {
+  try{
+    const response = await promptUser();
+
+    const readMe = generateMarkdown(response);
+
+    await writeFileAsync("README.md", readMe);
+    
+  } catch (err) {
+  }
+}
+
+//
+init();
