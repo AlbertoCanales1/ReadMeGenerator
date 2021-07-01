@@ -22,13 +22,19 @@ function generateMarkdown(data) {
   -[License](#license)
 
   ## Installation:
-  ${data.installation}
+  ${data.install}
 
   ## Usage:
   ${data.usage}
 
   ## Credits:
   ${data.credits}
+
+  ##GitHub:
+  ${data.github}
+
+  ##Email
+  ${data.email}
 
   ## License:
   ${data.license}

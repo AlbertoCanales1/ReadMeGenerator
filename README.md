@@ -1,4 +1,4 @@
-# undefined
+# READme generator
 
   #Table of Contents
 
@@ -8,16 +8,22 @@
   -[License](#license)
 
   ## Installation:
-  undefined
+  inquirer, fs
 
   ## Usage:
-  undefined
+  It helps generate a READme file
 
   ## Credits:
-  undefined
+  Alberto Canales
+
+  ##GitHub:
+  AlbertoCanales1
+
+  ##Email
+  albertocanales1@outlook.com
 
   ## License:
-  undefined
+  MIT
 
 
 

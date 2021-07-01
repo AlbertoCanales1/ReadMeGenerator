@@ -6,29 +6,41 @@ const generateMarkdown = require('./generateMarkdown.js')
 const questions = [
     {
         type: 'input',
-        name: 'motivation',
-        message: 'What was your motivation?',
+        name: 'title',
+        message: 'What is the name of your project?',
     },
     {
         type: 'input',
-        name: 'Why',
-        message: 'Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")',
+        name: 'install',
+        message: 'What do you need to install this project',
     },
     {
         type: 'input',
-        name: 'problems',
-        message: 'What problems did you solve?',
+        name: 'usage',
+        message: 'How can you use your project?',
     },
     {
         type: 'input',
-        name: 'learn',
-        message: 'What did you learn?',
+        name: 'credits',
+        message: 'Who made this?',
     },
     {
         type: 'input',
-        name: 'stand_out',
-        message: 'What makes your project stand out?'
-    }
+        name: 'github',
+        message: 'What is your git hub?'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email?',
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'What is your license?',
+        choices: ['Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'Common-Development-and Distribution', 'None'],
+    },
+    
 ]
 ///Write ReadMe File
 function writeToFile(fileName, data) {
