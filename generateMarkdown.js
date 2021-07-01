@@ -37,19 +37,20 @@ function generateMarkdown(data) {
 
 
 
-`;
+// `;
 }
+// }
 
-// TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(questions).then((answers) => {
-        const readmeContent = writeToFile(answers);
-        fs.writeFile('README.md', readmeContent, (err) =>
-        err ? console.log(err) : console.log('Successfully created README.md'))
-    })
-}+
+// // TODO: Create a function to initialize app
+// function init() {
+//     inquirer.prompt(questions).then((answers) => {
+//         const readmeContent = writeToFile(answers);
+//         fs.writeFile('README.md', readmeContent, (err) =>
+//         err ? console.log(err) : console.log('Successfully created README.md'))
+//     })
+// }+
 
 
 
-//
-init();
+// //
+// init();

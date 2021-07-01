@@ -1,9 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+
 const questions = []
-inquirer
-.prompt([
+([
     {
         type: 'input',
         name: 'motivation',
@@ -33,3 +33,17 @@ inquirer
     
 ])
 
+  
+  // TODO: Create a function to initialize app
+  function init() {
+      inquirer.prompt(questions).then((answers) => {
+          const readmeContent = writeToFile(answers);
+          fs.writeFile('README.md', readmeContent, (err) =>
+          err ? console.log(err) : console.log('Successfully created README.md'))
+      })
+  }+
+  
+  
+  
+  //
+  init();
