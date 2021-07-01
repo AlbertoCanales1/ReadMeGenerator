@@ -2,8 +2,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 
-const questions = []
-([
+
+const questions = [
     {
         type: 'input',
         name: 'motivation',
@@ -29,11 +29,18 @@ const questions = []
         name: 'stand_out',
         message: 'What makes your project stand out?'
     }
+]
+///Write ReadMe File
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err)
+            throw err;
+        console.log('Success!')
+    });
+};  
 
-    
-])
 
-  
+
   // TODO: Create a function to initialize app
   function init() {
       inquirer.prompt(questions).then((answers) => {
