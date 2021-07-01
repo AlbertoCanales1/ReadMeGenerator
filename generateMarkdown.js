@@ -40,19 +40,16 @@ function generateMarkdown(data) {
 `;
 }
 
-//Initialize the program
+// TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        const readmeContent = writeToFile(answers);
+        fs.writeFile('README.md', readmeContent, (err) =>
+        err ? console.log(err) : console.log('Successfully created README.md'))
+    })
+}+
 
-async function init() {
-  try{
-    const response = await promptUser();
 
-    const readMe = generateMarkdown(response);
-
-    await writeFileAsync("README.md", readMe);
-    
-  } catch (err) {
-  }
-}
 
 //
 init();
