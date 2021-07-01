@@ -12,8 +12,7 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `
-  # ${data.title}
+  return `# ${data.title}
 
   #Table of Contents
 
@@ -23,22 +22,24 @@ function generateMarkdown(data) {
   -[License](#license)
 
   ## Installation:
-  ${response.installation}
+  ${data.installation}
 
   ## Usage:
-  ${response.usage}
+  ${data.usage}
 
   ## Credits:
-  ${response.credits}
+  ${data.credits}
 
   ## License:
-  ${response.license}
+  ${data.license}
 
 
 
 
 // `;
 }
+
+module.exports = generateMarkdown;
 // }
 
 // // TODO: Create a function to initialize app
